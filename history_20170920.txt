@@ -951,21 +951,31 @@
  1995  mozilla
  1996  nano git-download.sh
  1997  ls -l
+
  1998  cat git-download.sh
+paarsaukt git-download.sh par git-download, lai buutu vienkaarsaak failu atrast. lai nav jaaraksta katru reizi .sh
  1999  git-download
+
  2000  ls
  2001  git-download
  2002  echo $PATH
+
  2003  whereis ls
+kur atrodas komandas ls apraksts
  2004  ls -l /bin/ls
+faila ar nosaukumu ls (atrodas mape /bin) lasiisana;paraadiisies nesaprotami simboli, jo atrodas datora instrukcijas vinja valodaa
  2005  cat /bin/ls
+
  2006  ls -l
  2007  pwd
  2008  git-download
+
  2009  ls
  2010  pwd
  2011  PATH=$PATH:/home/user
- 2012  echo $PATH
+sistemas celu paplashinaasana ar celju /home/user 
+2012  echo $PATH
+
  2013  ls
  2014  git-download
  2015  dit-download.sh
@@ -986,15 +996,25 @@
  2030  ls -l
  2031  ls -la
  2032  mv ls -l
+
  2033  pwd
+izvada katalogu
  2034  ls
+
  2035  mv ~/git-download ./
+paarvietot mapi no maajas apgabala~ ar nosaukumu git-download (jaaliek// ziimees) uz shejieni./
+
  2036  ls -l
  2037  echo $PATH
  2038  PATH=$PATH:~/DMI
  2039  git-download 
  2040  ls -l
+
  2041  rm -rf DMI/
+
  2042  ls -l
+apskatiities mapes saturu
  2043  nano git-upload
+
  2044  history > history_20170920.txt
+pievienojam veesturi
