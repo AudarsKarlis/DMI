@@ -1,70 +1,3 @@
- 1023  cat /et
- 1024  cat /etc/
- 1025  pwd
- 1026  whoami
- 1027  who
- 1028  ls
- 1029  ls-l
- 1030  ls -l
- 1031  ls
- 1032  ls -a
- 1033  ls -la
- 1034  cd D
- 1035  pwd
- 1036  cd Documents
- 1037  cd user
- 1038  ls
- 1039  cd documents
- 1040  pwd
- 1041  cd -
- 1042  cd documents
- 1043  ls -l
- 1044  ls -la
- 1045  pwd
- 1046  cd .
- 1047  pwd
- 1048  ls
- 1049  cd ..
- 1050  pwd
- 1051  cd..
- 1052  cd ..
- 1053  pwd
- 1054  cd /home/user
- 1055  cd /
- 1056  cd~
- 1057  cd ~
- 1058  whoami
- 1059  cd
- 1060  pwd
- 1061  ls
- 1062  mkdir darbi
- 1063  mkdir Darbi
- 1064  ls
- 1065  cd /
- 1066  mkdir Darbi
- 1067  cd
- 1068  ls -l
- 1069  ls -la
- 1070  cd
- 1071  ls
- 1072  mkdir VirtualBox VMs
- 1073  rmdir VirtualBox VMs
- 1074  ls
- 1075  man rmdir VirtualBox VMs
- 1076  ls
- 1077  rmdir darbi
- 1078  man rmdir darbi
- 1079  man rmdir
- 1080  man rmdir --ignore-on-non-empty darbi
- 1081  rmdir --ignore-fail-on-non-empty darbi
- 1082  ls
- 1083  cd darbi
- 1084  ls
- 1085  Darbi
- 1086  cd
- 1087  cd Darbi
- 1088  ls
- 1089  cd
  1090  rmdir Darbi
  1091  ls
  1092  mkdir Darbi
@@ -998,3 +931,70 @@
  2020  pwd
  2021  ls -la
  2022  history > history_20170927.txt
+ 2023  ls -la
+ 2024  nano git-upload
+ 2025  git upload
+ 2026  ls -la
+ 2027  nano git-upload
+ 2028  git-upload
+ 2029  pwd
+ 2030  ls -la
+ 2031  echo $0
+ 2032  echo $#
+ 2033  echo $*
+ 2034  echo $@
+ 2035  echo $?
+ 2036  echo $$
+ 2037  echo $!
+ 2038  nano shell_examples.sh 
+ 2039  shell_examples.sh 
+ 2040  cat shell_examples.sh 
+ 2041  nano shell_examples.sh 
+ 2042  shell
+ 2043  shell_examples.sh 
+ 2044  shell_examples.sh arg1
+ 2045  shell_examples.sh arg1 arg2
+ 2046  shell_examples.sh arg1 arg2 arg3
+ 2047  nano shell_examples.sh 
+ 2048  shell_examples.sh arg1 arg2 arg3
+ 2049  nano shell_examples.sh 
+ 2050  shell_examples.sh arg1 arg2 arg3
+ 2051  nano shell_examples.sh 
+ 2052  shell_examples.sh arg1 arg2 arg3
+ 2053  nano shell_examples.sh 
+ 2054  shell_examples.sh arg1 arg2 arg3
+ 2055  nano shell_examples.sh 
+ 2056  shell_examples.sh arg1 arg2 arg3
+ 2057  nano shell_examples.sh 
+ 2058  shell_examples.sh arg1 arg2 arg3
+ 2059  nano shell_examples.sh 
+ 2060  shell_examples.sh arg1 arg2 arg3
+ 2061  nano shell_examples.sh 
+ 2062  shell_examples.sh arg1 arg2 arg3
+ 2063  nano shell_examples.sh 
+ 2064  shell_examples.sh
+ 2065  shell_examples.sh arg1
+ 2066  shell_examples.sh arg1 arg2
+ 2067  shell_examples.sh arg1 arg2 arg3
+ 2068  nano shell_examples.sh 
+ 2069  shell_examples.sh arg1 arg2 arg3
+ 2070  nano shell_examples.sh 
+ 2071  shell_examples.sh
+ 2072  shell_examples.sh arg1
+ 2073  shell_examples.sh arg1 arg2
+ 2074  shell_examples.sh arg1 arg2 arg3
+ 2075  nano shell_examples.sh 
+ 2076  shell_examples.sh arg1 arg2 arg3
+ 2077  nano shell_examples.sh 
+ 2078  shell_examples.sh arg1 arg2 arg3
+ 2079  shell_examples.sh arg1 arg2 arg3 arg4
+ 2080  nano shell_examples.sh 
+ 2081  shell_examples.sh arg1 arg2 arg3 arg4
+ 2082  nano shell_examples.sh 
+ 2083  shell_examples.sh
+ 2084  nano shell_examples.sh 
+ 2085  shell_examples.sh
+ 2086  nano shell_examples.sh 
+ 2087  shell_examples.sh
+ 2088  nano git-upload
+ 2089  history > history_20170927.txt
