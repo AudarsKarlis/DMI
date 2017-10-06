@@ -1,0 +1,81 @@
+cat
+
+cd | Komanda, ar kuru var pārvietoties pa katalogiem.
+
+cd .
+
+cd .. | Komanda, ar kuru var pārvietoties iepriekšējā katalogā.
+
+cd ~ | Komanda, kura aizved uz mājas apgabalu.
+
+chmod
+
+clone https:github.com/ | Komanda, ar kuru "GitHub" saturu lejupielādē
+konkrētais lietotājs
+
+echo
+
+echo $PATH
+
+echo -e
+
+echo \t
+
+echo *
+
+git .
+
+git add .
+
+git cat
+
+history > history.txt
+
+is
+
+ls | Komanda, kura parāda katalaogā eksistējošus failus un mapes
+
+ls -l | Komanda, kura parāda katalogā eksistējošus failus un mapes ar
+izvērstu informāciju par tiem.
+
+ls -a | Komanda, kura parāda katalogā eksistējošus failus un mapes, un arī
+failis, kuri sākas ar zīmi ".".
+
+ls -la | Komanda, kura parāda katalogā eksistējošus failus un mapes, un arī
+slēptus failus.
+
+lsb_release
+
+man
+
+mkdir | Komanda, ar kuru var izveidot jaunu mapi vai katalogu.
+
+mv | Komanda, ar kuru ir iespējams pārvietot failus uz citu mapi.
+
+nano git-download.sh | Komanda, ar kuras palīdzību ir iespējams rediģēt failu
+ar nosaukumu "git-download.sh".
+
+PATH=$PATH:/home/user | Ceļa papildināšana.
+
+pwd | Komanda, kura parāda, kurā mapē pašlaik atrodas lietotājs.
+
+run chrome | Tiek startēta interneta pārlūkprogramma "GoogleChrome".
+
+rm | Komanda, ar kuru var izdzēst failus
+
+uname -r | Komanda, ar kuras palīdzību tiek parādīta informācija par
+konkrētā datora operētājsistēmu.
+
+x=10
+
+x = $x
+
+whereis ls | Komanda, kura parāda, kurā vietā atrodas komandas "ls" apraksts.
+
+whereis git download | Komanda, kura parāda, kur atrodas fails ar
+nosaukumu "git download".
+
+who | Komanda, kura parāda visus lietotājus, kuri šajā brīdī vienlaicīgi
+strādā vienotā tīklā..
+
+whoami | Komanda, kura parāda, manu lietotājvārdu.
