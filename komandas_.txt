@@ -1,0 +1,65 @@
+cat | ("to concatenate") Komanda, kura parāda faila saturu.
+
+cd | ("change directory") Komanda, ar kuru var pārvietoties pa katalogiem.
+
+cd .. | Komanda, ar kuru var pārvietoties uz iepriekšējo katalogu.
+
+cd ~ | Komanda, kura aizved uz mājas apgabalu.
+
+chmod | ("change mode") Komanda, ar kuras palīdzību var mainīt faila vai mapes "lasīšanas",
+"rakstīšanas" un "izpildīšanas" iestatījumus.
+
+clone https:github.com/ | Ar šo darbību lejupielādēju iepriekšējo nodarbību
+izveidoto failu saturu no "GitHub".
+
+echo | Komanda, ar kuras palīdzību jau eksistējošā failā var ievadīt
+nepieciešamo tekstu, neatverot failu.
+
+history > history.txt | Darbība, ar kuru nodarbībā izveidoto komandu secību
+pārveido teksta failā un pievieno "GitHubā" esošajai mapei "DMI".
+
+ls | Komanda, kura parāda katalogā eksistējošus failus un mapes.
+
+ls -l | Komanda, kura parāda katalogā eksistējošus failus un mapes ar
+izvērstu informāciju par tiem.
+
+ls -a | Komanda, kura parāda katalogā eksistējošus failus un mapes, un arī
+failus, kuri sākas ar zīmi ".".
+
+ls -la | Komanda, kura parāda katalogā eksistējošus failus un mapes, un arī
+slēptus failus.
+
+man | Komanda, ar kuras palīdzību var atvērt datubāzi ar skaidrojumiem
+un aprakstiem par konkrētu komandu.
+
+mkdir | Komanda, ar kuru var izveidot jaunu mapi vai katalogu.
+
+mv | Komanda, ar kuru ir iespējams pārvietot failus uz citu mapi.
+
+nano git-download.sh | Komanda, ar kuras palīdzību ir iespējams rediģēt failu
+ar nosaukumu "git-download.sh".
+
+PATH=$PATH:/home/user/DMI | Ceļa papildināšana ar mapi "DMI".
+
+pwd | Komanda, kura parāda, kurā mapē pašlaik atrodas lietotājs.
+
+rm | Komanda, ar kuru var izdzēst failus.
+
+rm -r | Komanda, ar kuru ir iespējams izdzēst katalogu pat tad, ja tajā
+atrodas faili.
+
+touch | Komanda, ar kuru var izveidot jaunu (tukšu) failu, pēc faila
+nosaukuma norādot tā veidu, piem., ".txt" vai ".zip".
+
+uname -r | Komanda, ar kuras palīdzību tiek parādīta informācija par
+konkrētā datora operētājsistēmu.
+
+whereis ls | Komanda, kura parāda, kurā vietā atrodas komandas "ls" apraksts.
+
+whereis git download | Komanda, kura parāda, kur atrodas fails ar
+nosaukumu "git download".
+
+who | Komanda, kura parāda visus lietotājus, kuri šajā brīdī vienlaicīgi
+strādā vienotā tīklā.
+
+whoami | Komanda, kura parāda, manu lietotājvārdu.
