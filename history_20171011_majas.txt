@@ -96,3 +96,4 @@
    96  ./shell_operators_majas.sh
    97  nano git-upload
    98  history > history_20171011.txt
+   99  history > history_20171011_majas.txt
