@@ -1,31 +1,3 @@
- 1046  ls -l
- 1047  rmdir apakshdarbi/
- 1048  rm apakshdarbi/
- 1049  man rm
- 1050  rm -rf apakshdarbi/
- 1051  ls -la
- 1052  cd /
- 1053  ls
- 1054  mkdir apakshdarbi
- 1055  rm dev
- 1056  rm -rf dev
- 1057  rm dev1
- 1058  cd
- 1059  pwd
- 1060  cd manidarbi/
- 1061  chrome
- 1062  firefox
- 1063  uname -r
- 1064  lsb_release
- 1065  cat /etc/*-release
- 1066  echo $0
- 1067  pwd
- 1068  whoami
- 1069  who
- 1070  ls
- 1071  cd
- 1072  mkdir pootis
- 1073  ls
  1074  rmdir pootis
  1075  history
  1076  man
@@ -998,3 +970,31 @@
  2043  ./shell_operators.sh 
  2044  nano git-upload
  2045  history > history_20171011.txt
+ 2046  ./git-upload
+ 2047  nano shell_operators.sh 
+ 2048  ./shell_operators.sh 5 10
+ 2049  ./shell_operators.sh 78 96
+ 2050  nano shell_operators.sh 
+ 2051  ./shell_operators.sh 5 2
+ 2052  ./shell_operators.sh 20 5
+ 2053  ./shell_operators.sh 19 2
+ 2054  ./shell_operators.sh 
+ 2055  nano shell_operators.sh 
+ 2056  ./shell_operators.sh 
+ 2057  ./shell_operators.sh 1
+ 2058  ./shell_operators.sh 1 56
+ 2059  ./shell_operators.sh 88888
+ 2060  ./shell_operators.sh 88888 777722277772938
+ 2061  ./shell_operators.sh 88888 777
+ 2062  ./shell_operators.sh g
+ 2063  ./shell_operators.sh g u
+ 2064  ./shell_operators.sh a b
+ 2065  ./shell_operators.sh 45 7
+ 2066  nano dialogs.sh
+ 2067  ls -la
+ 2068  chmod 744 dialogs.sh
+ 2069  ./dialogs.sh
+ 2070  nano dialogs.sh
+ 2071  ./dialogs.sh
+ 2072  nano git-upload
+ 2073  history > history_20171011.txt
