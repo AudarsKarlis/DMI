@@ -1,6 +1,6 @@
 #!/bin/bash
 git config --global user.email aa13.a.klints@pt.edu.lv
 git add .
-git commit -m "20171007_09_40"
+git commit -m "20171011_14_10"
 git push origin master
 

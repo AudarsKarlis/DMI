@@ -1,0 +1,6 @@
+#!/bin/sh
+
+a=20
+b=20
+
+val=`expr $a +$b`
