@@ -1,13 +1,17 @@
 # 1. piemērs
-echo "Jūs izmantojat kalkulatoru, ar kuru ir iespējams veikt dažus vienkāršus aprēķinus."
+echo "Tu izmanto kalkulatoru, ar kuru ir iespējams veikt dažus vienkāršus aprēķinus."
 
-echo "Lūdzu ievadiet pirmo argumentu!"
+echo "Audar, lūdzu ievadi pirmo argumentu!"
 read a
-
-echo "Lūdzu ievadiet otro argumentu!"
+echo " "
+echo "Pirmais arguments ir ievadīts."
+echo "Audar, lūdzu ievadi otro argumentu!"
 read b
-
+echo " "
 val1=`expr $a - $b`
+echo "Otrais arguments ir ievadīts."
+echo "Šeit būs vienkāršo aprēķinu rezultāti:"
+echo " "
 echo "Ja no $a atņem $b, iznākums ir "$val1.
 
 val2=`expr $a + $b`
