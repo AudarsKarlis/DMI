@@ -1,0 +1,17 @@
+    1  VirtualBox --startvm XP
+    2  ls -l
+    3  git clone https://github.com/AudarsKarlis/DMI.git
+    4  ls -l
+    5  cd DMI
+    6  ls -l
+    7  cd PYTHON
+    8  ls -l
+    9  idle &
+   10  ls -l
+   11  cat python_diary
+   12  cat python_diary_20171129.py 
+   13  idle &
+   14  cd ..
+   15  cd..
+   16  pwd
+   17  history > history_20171129.txt
