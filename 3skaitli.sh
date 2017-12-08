@@ -7,33 +7,34 @@ echo "Input c:"
 read c
 
 if (( $a > $b && $a > $c ))
-then $a=$k
-fi
-echo "$k"
-
-: <<'END'
-if (( $b > $c ))
-then $b=$j
-$c=$i
-else $c=$j
-$b=$i
+then k=$a
+  if (( $b > $c ))
+  then j=$b
+   i=$c
+  else j=$c
+   i=$b
+  fi
 fi
 
-#: <<'END'
 if (( $b > $a && $b > $c ))
-then $b=$k
-if (( $a > $c ))
-then $a=$j
-$c=$i
+then k=$b
+  if (( $a > $c ))
+  then j=$a
+   i=$c
+  else j=$c
+   i=$a
+  fi
 fi
 
-if (( $c > $b && $c > $a ))
-then $c=$i
-if (( $a > $c ))
-then $a=$j
-$b=$i
+if (( $c > $a && $c > $b ))
+then k=$c
+ if (( $a > $b ))
+ then j=$a
+  i=$b
+ else j=$b
+  i=$a
+ fi
 fi
-END
 
-#echo "$i, $j, $k"
-#echo "$k"
+echo "Skaitļi augošā secībā ir:"
+echo "$i, $j, $k"
