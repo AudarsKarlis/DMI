@@ -1,0 +1,7 @@
+    1  VirtualBox --startvm XP
+    2  git clone https://github.com/AudarsKarlis/DMI.git
+    3  cd DMI
+    4  ls -l
+    5  cd PYTHON
+    6  nano quiz.py
+    7  history > history_20171213.txt
