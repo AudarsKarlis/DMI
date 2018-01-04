@@ -4,40 +4,69 @@ echo "Lūdzu ievadiet skaitļu virkni, starp katru skaitli ievadot vienu atstarp
 read input
 
 array=($input)
-echo "Jūsu ievadītā skaitļu virkne ir šāda:"
-echo ${array[@]}
+#echo "Jūsu ievadītā skaitļu virkne ir šāda:"
+#echo ${array[@]}
 
 N=${#array[@]}
-echo $N
+echo "Elementu skaits ir $N"
 
 n=0
-a=${array[n]}
-echo $a
+a=${array[$n]}
+while (( $n < $N-1 ))
+do
+  n=`expr $n + 1`
+  if (( $a < ${array[$n]} ))
+  then a=${array[$n]}
+  fi
+done
+echo "Vislielākā vērtība skaitļu virknē ir $a."
+
+n=0
+a=${array[$n]}
+while (( $n < $N-1 ))
+do
+  n=`expr $n + 1`
+  if (( $a > ${array[$n]} ))
+  then a=${array[$n]}
+  fi
+done
+echo "Vismazākā ievadītā vērtība skaitļu virknē ir $a."
+
+for ((i=0;i<count;i++))
+do
+echo -n " ${array[i]} "
+done
+#šeit iekopēju
+echo "Ievadītie skaitļi augošā secībā:"
+
+for((i=0;i<$N;i++))
+do
+
+   for((j=i+1;j<$N;j++))
+   do
+     if((array[i]>array[j]))
+     then
+     temp=${array[i]};
+     array[$i]=${array[j]};
+      array[$j]=$temp;
+
+     fi
+   done
+
+done
+
+for((i=0;i<$N;i++))
+do
+echo ${array[i]};
+done
+#tagad veidojam mediānu
+
+if (( N % 2 == 1 )); then     # Odd number of elements
+    val="${array[ $((N/2)) ]}"
+else                            # Even number of elements
+    val="$(( ( array[$((N/2))] + array[$((N/2-1))] ) / 2 ))"
+fi
+#echo "Mediāna ir:"
+printf "Mediāna ir %d\n" "$val"
 
 
-n=`expr $n + 1`
-a=${array[n]}
-echo $a
-
-n=`expr $n + 1`
-echo ${array[n]}
-
-#echo ${array_iden[5]}
-
-#name[index]=value
-#Unix[0]='Red hat' 
-#echo ${Unix[0]}
-#echo "Lūdzu ievadiet skaitļu virkni!"
-# Vai arī katru elementu var ievadīt atsevišķi?
-#read skaitļu virkni #ievadītie elementi ir jāuztver kā skaitļi
-# nolasīt ievadīto skaitļu skaitu
-# pirmajam skaitlim piešķirt apzīmējumu x0
-# otrajam skaitlim piešķirt apzīmējumu x1
-# trešajam skaitlim piešķirt apzīmējumu x2
-# n-tajam skaitlim piešķirt apzīmējumu xn
-# n+1-ajam skaitlim piešķirt apzīmējumu xn+1
-
-# $a piršķirt elementa x0 vērtību
-# if a < x1 vērtību then a = x1 vērtība, else $a paliek piešķirtā x0 vērtība
-
-# if a < x2 vērtību, then a = x2 vērtīb, else $a paliek tā piešķirtā vērtība
