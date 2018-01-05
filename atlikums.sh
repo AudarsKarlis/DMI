@@ -10,3 +10,4 @@ do
   x=`expr $x + 1`
 done
 
+# apskatīt un palasīt par bash positioning
