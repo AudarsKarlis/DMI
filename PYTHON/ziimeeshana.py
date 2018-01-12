@@ -1,7 +1,16 @@
 #https://matplotlib.org/users/pyplot_tutorial.html
 
+'''
 import matplotlib.pyplot as plt
-plt.plot([1,2,3,4], [1,4,9,16], 'vg', markersize=30)
+plt.plot([1,2,3,4], [1,4,9,16], 'gv', markersize=30)
+plt.plot([1,2,3,4], [1,4,9,16],'-.c', linewidth=10)
+plt.axis([0, 6, 0, 20])
+plt.grid()
+plt.show()
+'''
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4], [1,4,9,16], 'gv', markersize=30)
 plt.plot([1,2,3,4], [1,4,9,16],'-.c', linewidth=10)
 plt.axis([0, 6, 0, 20])
 plt.grid()
@@ -33,3 +42,7 @@ plt.ylabel('some numbers')
 plt.xlabel('some other numbers')
 plt.show()
 '''
+# yy = np.sin(x)
+# plt.plot(x,yy)
+# plt.show(x,y)
+# plt.show(x,yy)
