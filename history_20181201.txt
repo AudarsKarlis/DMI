@@ -1,0 +1,47 @@
+    1  VirtualBox --startvm XP
+    2  idle &
+    3  cd ..
+    4  cd PYTHON
+    5  cp dichotomy.py mana_dichotomy.py
+    6  nano mana_dichotomy.py 
+    7  python mana_dichotomy.py
+    8  nano mana_dichotomy.py 
+    9  python mana_dichotomy.py
+   10  nano mana_dichotomy.py 
+   11  python mana_dichotomy.py
+   12  ls -l
+   13  nano ziimeeshana.py
+   14  python ziimeeshana.py
+   15  nano ziimeeshana.py
+   16  idle  ziimeeshana.py &
+   17  /.git-upload 2018 1202.21.00
+   18  cd ..
+   19  /.git-upload 2018 1202.21.00
+   20  /.git-upload 20181202.21.00
+   21  ./git-upload 20181201.21.00
+   22  cd PYTHON
+   23  ls -l
+   24  cp ziimeeshana.py mana_ziimeeshana.py
+   25  nano mana_ziimeeshana.py
+   26  python mana_ziimeeshana.py
+   27  nano mana_ziimeeshana.py
+   28  python mana_ziimeeshana.py
+   29  nano mana_ziimeeshana.py
+   30  python mana_ziimeeshana.py
+   31  nano mana_ziimeeshana.py
+   32  python mana_ziimeeshana.py
+   33  nano mana_ziimeeshana.py
+   34  python mana_ziimeeshana.py
+   35  nano mana_ziimeeshana.py
+   36  python mana_ziimeeshana.py
+   37  nano mana_ziimeeshana.py
+   38  python mana_ziimeeshana.py
+   39  nano mana_ziimeeshana.py
+   40  python mana_ziimeeshana.py
+   41  nano mana_ziimeeshana.py
+   42  python mana_ziimeeshana.py
+   43  nano mana_ziimeeshana.py
+   44  python mana_ziimeeshana.py
+   45  nano mana_ziimeeshana.py
+   46  cd ..
+   47  history > history_20181201.txt
