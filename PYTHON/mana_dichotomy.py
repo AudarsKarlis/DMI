@@ -64,7 +64,7 @@ k = 0
 while b-a > delta_x:
     k = k+1
     x = (a+b)/2
-    funx = mans_sinuss(x)
+    funx = mans_asinuss(x)
     print "%3d. a=%.5f f(%.5f)=%8.5f b=%.5f"%(k,a,x,funx,b)
     if funa * funx > 0:
         a = x
