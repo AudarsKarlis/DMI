@@ -1,3 +1,5 @@
+# -"- coding: utf-8 -"-            (šis jāraksta, ja kodā tiks izmantoti burti ar
+#                                   mīkstinājuma zīmēm)
 #https://matplotlib.org/users/pyplot_tutorial.html
 
 '''
@@ -38,16 +40,16 @@ a = -0.95
 b = 0.95
 x = np.arange(a,b,0.01)
 y = mans_asinuss(x)
-yy = np.asin(x)
+yy = np.arcsin(x)
 plt.plot(x,y, 'ro', markersize=15)
-plt.plot(x,yy, 'ro', markersize=15)
-plt.axis([0, 6, 0, 20])
+plt.plot(x,yy, 'g-', markersize=10)
+plt.axis([-0.95, 0.95, -3.15, 3.15])
 plt.grid()
 plt.show()
 
 '''
 plt.plot([1,2,3,4], [1,4,9,16], 'ro', markersize=15)
-plt.plot([1,2,3,4], [1,4,9,16],':b', linewidth=1.5)
+plt.plot([1,2,3,4], [1,4,9,16],':b', linewidth=0.3)
 plt.axis([0, 6, 0, 20])
 plt.grid()
 plt.show()
