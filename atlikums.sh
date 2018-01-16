@@ -3,7 +3,7 @@ echo "Ievadiet argumentu:"
 read input
 x=$input
 
-a="Skaitlis:"
+a="Skaitlis:" # Mainīgajam a tiek piešķirta 
 b="%1"
 c="%2"
 d="%3"
