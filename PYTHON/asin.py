@@ -38,7 +38,7 @@ print "Aprēķināsim funkciju Jūsu ievadītajam argumentam."
 
 from math import asin
 
-def mans_asinuss(x):
+def mans_asinuss (x):
     k = 0
     a = x
     S = a
@@ -52,17 +52,17 @@ def mans_asinuss(x):
         if k == 499:
             print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
         if k == 500:
-            print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f\n Šīs vērtības tika aprēķinātas ar standarta funkciju aprēķinu, kas\n ņemts no math bibliotēkas."%(k,a,k,S)
+            print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f\n Šīs vērtības tika aprēķinātas ar standarta funkcijas aprēķinu, kas\n ņemts no math bibliotēkas."%(k,a,k,S)
 
     return S
 
 
 
-x = 1. * input("Lietotāj, ievadi argumentu (x): ")
+x = 1. * input("Lietotāj, ievadi tādu argumentu (x), lai izpildītos nosacījums 0 < x > 1: ")
 y = asin(x)
-print "Standarta asin(%6.2f) = %6.2f"%(x,y)
+print "Standarta asin (%6.2f) = %6.2f"%(x,y)
 yy = mans_asinuss(x)
-print "mans asin(%.2f) = %6.2f"%(x,yy)
+print "Mans asin (%.2f) = %6.2f"%(x,yy)
 
 k = 0
 a = x
@@ -81,6 +81,6 @@ while k < 500:
 
 print "Tā kā vērtības, kuras tika aprēķinātas ar math oriģinālo funkciju, ir"
 print "vienādas ar vērtībām, kuras aprēķinātas, izmantojot Teilora rindu,"
-print "tad var secināt, ka mana funkcija ir pareizi izveidota."
+print "tad var secināt, ka summas funkcija ir izveidota pareizi."
 print "Beigas!"
 
