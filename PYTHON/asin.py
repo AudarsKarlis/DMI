@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-print "Funkcija, kura tiks apskatiita shajaa kodaa, ir funkcija y=arcsin(x)"
-print "Matemaatikaa jebkuru funkciju var uzrakstiit, izmantojot Teilora rindu, kas ir"
-print "atseviskju elementu summa."
-print "Funkciju y=arcsin(x) peec izvirziijuma Teilora rindaa var uzrakstiit shaadi:"
+print "Funkcija, kura tiks apskatīta šajā kodā, ir funkcija y=arcsin(x)."
+print "Matemaatikā jebkuru funkciju var uzrakstīt, izmantojot Teilora rindu, kas ir"
+print "atsevišķu elementu summa."
+print "Funkciju y=arcsin(x) pēc izvirzījuma Teilora rindā var uzrakstīt šādi:"
 print ""
 print ""
 print "           500"
@@ -21,9 +21,9 @@ print "      ------------"
 print "          k = 0"
 print ""
 print ""
-print "Katru naakamo Teilora rindas locekli var apreekjinaat, esosho locekli"
-print "reizinot ar rekurences reizinaataaju R."
-print "Rekurences reizinaataajs izskataas shaadi:"
+print "Katru nākamo Teilora rindas locekli var aprēķināt, esošo locekli"
+print "reizinot ar rekurences reizinātāju R."
+print "Rekurences reizinātājs izskatās šādi:"
 print ""
 print ""
 print "        2           2"
@@ -32,23 +32,21 @@ print "  R = ---------------"
 print "        2k (2k + 1)"
 print ""
 print ""
+print "Aprēķināsim funkciju Jūsu ievadītajam argumentam."
 
 
 
 from math import asin
 
-#def mans_sinuss(x): # pārveidot?
-def mans_asinuss(x): # šis ir pārveidots
+def mans_asinuss(x):
     k = 0
-#    a = (-1)**0*x**1/(1) #vajag aprēķināt pirmo virknes locekli
-    a = x # šis ir pārveidots, bet vai pareizi???
+    a = x
     S = a
     print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
 
     while k < 500:
         k = k + 1
-#        R = a * (-1)*x*x/((2*k)*(2*k+1)) #šo te pārveidot
-        R = x*x*(2*k-1)*(2*k-1)/((2*k)*(2*k+1)) #šis ir pārveidots
+        R = x*x*(2*k-1)*(2*k-1)/((2*k)*(2*k+1))
         a = a * R
         S = S + a
         if k == 499:
@@ -56,32 +54,25 @@ def mans_asinuss(x): # šis ir pārveidots
         if k == 500:
             print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
 
-    #print "Izdruka no liet. f. Beigas!"
     return S
 
 
 
 x = 1. * input("Lietotāj, ievadi argumentu (x): ")
-#y = sin(x) # šo te ir jāpārveido
-y = asin(x) # šis ir pārveidots
-#print "standarta sin(%6.2f) = %6.2f"%(x,y) # pārveidot???
+y = asin(x)
 print "standarta asin(%6.2f) = %6.2f"%(x,y)
-#yy = mans_sinuss(x) # pārveidot???
 yy = mans_asinuss(x)
-#print "mans sin(%.2f) = %6.2f"%(x,yy) # pārveidot?
 print "mans asin(%.2f) = %6.2f"%(x,yy)
 
 k = 0
-#a = (-1)**0*x**1/(1) # pārveidot?
 a = x
 
 S = a
 print "a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
 
-while k < 500: # tete
+while k < 500:
     k = k + 1
-#    a = a * (-1)*x*x/((2*k)*(2*k+1)) # pārveidot?
-    a = a*x*x*(2*k-1)*(2*k-1)/((2*k)*(2*k+1)) # tete
+    a = a*x*x*(2*k-1)*(2*k-1)/((2*k)*(2*k+1))
     S = S + a
     if k == 499:
         print "a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
@@ -90,19 +81,3 @@ while k < 500: # tete
 
 print "Beigas!"
 
-'''
-k = k + 1
-a = a * (-1)*x*x/((2*k)*(2*k+1))
-S = S + a
-print "a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
-
-k = k + 1
-a = a * (-1)*x*x/((2*k)*(2*k+1))
-S = S + a
-print "a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
-
-k = k + 1
-a = a * (-1)*x*x/((2*k)*(2*k+1))
-S = S + a
-print "a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
-'''
