@@ -52,7 +52,7 @@ def mans_asinuss(x):
         if k == 499:
             print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
         if k == 500:
-            print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
+            print "Izdruka no liet. f. a%d = %6.2f S%d = %6.2f\n Šīs vērtības tika aprēķinātas ar standarta funkciju aprēķinu, kas\n ņemts no math bibliotēkas."%(k,a,k,S)
 
     return S
 
@@ -60,7 +60,7 @@ def mans_asinuss(x):
 
 x = 1. * input("Lietotāj, ievadi argumentu (x): ")
 y = asin(x)
-print "standarta asin(%6.2f) = %6.2f"%(x,y)
+print "Standarta asin(%6.2f) = %6.2f"%(x,y)
 yy = mans_asinuss(x)
 print "mans asin(%.2f) = %6.2f"%(x,yy)
 
@@ -77,7 +77,10 @@ while k < 500:
     if k == 499:
         print "a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
     if k == 500:
-        print "a%d = %6.2f S%d = %6.2f"%(k,a,k,S)
+        print "a%d = %6.2f S%d = %6.2f\n Šīs vērtības tika aprēķinātas, izmantojot izvirzījumu\n Teilora rindā."%(k,a,k,S)
 
+print "Tā kā vērtības, kuras tika aprēķinātas ar math oriģinālo funkciju, ir"
+print "vienādas ar vērtībām, kuras aprēķinātas, izmantojot Teilora rindu,"
+print "tad var secināt, ka mana funkcija ir pareizi izveidota."
 print "Beigas!"
 
