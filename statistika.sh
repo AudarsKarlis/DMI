@@ -45,31 +45,36 @@ echo "Ievadītie skaitļi augošā secībā:"
 for((i=0;i<$N;i++))
 do
 
-   for((j=i+1;j<$N;j++))
-   do
-     if((array[i]>array[j]))
-     then
-     temp=${array[i]};
-     array[$i]=${array[j]};
-      array[$j]=$temp;
+   for((j=i+1;j<$N;j++)) # j tiek piešķirta vērtība, kas vienāda ar izteiksmi i + 1 (tas būs nākamais
+                         # elements); kamēr j vērtība ir mazāka par
+                         # elementu skaitu, ko apzīmē mainīgais N, j vērtību pirms katra cikla sākuma
+                         # palielināt par 1.
+   do # izpildīt sekojošo
+     if((array[i]>array[j])) # ja masīva elements ar kārtas numuru i ir lielāks par masīva elementu ar
+                             # kārtas numuru j,
+     then # tad
+     temp=${array[i]}; # palīgmainīgajam temp tiek piešķirta masīva elementa ar kārtas numuru i vērtība.
+     array[$i]=${array[j]}; # Šo rindu nesaprotu.
+      array[$j]=$temp; # Šo rindu nesaprotu.
 
-     fi
-   done
+     fi # Šei beidzas if nosacījums.
+   done # Šeit beidzas apakšcikls.
 
-done
+done # Šeit beidzas cikls.
 
-for((i=0;i<$N;i++))
-do
-echo ${array[i]};
-done
+for((i=0;i<$N;i++)) # Šeit sākas sakārtotās skaitļu virknes attēlošanas cikls.
+                    # i tiek piešķirta vērtība, kura vienāda ar 0 (kā sākuma vērtība); kamēr i skaitliskā vētība
+                    # ir mazāka par elementu skaitu: katrā ciklā i skaitlisko vērtību palielināt par 1.
+do # Izpildīt sekojošo
+echo ${array[i]}; # Katrā ciklā attēlot vienu mainīgo (tie tiks attēloti katrs savā rindā).
+done # Šeit beidzas sakārtotās skaitļu virknes attēlošanas cikls.
 #tagad veidojam mediānu
 
-if (( N % 2 == 1 )); then     # Odd number of elements
+if (( N % 2 == 1 )); then     # Odd number of elements (nepāra elementu skaits)
     val="${array[ $((N/2)) ]}"
-else                            # Even number of elements
+else                            # Even number of elements (pāra elementu skaits)
     val="$(( ( array[$((N/2))] + array[$((N/2-1))] ) / 2 ))"
 fi
-#echo "Mediāna ir:"
 printf "Mediāna ir %d.\n" "$val"
 
 
