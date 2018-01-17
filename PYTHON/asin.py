@@ -1,6 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-print ""
+print "Funkcija, kura tiks apskatiita shajaa kodaa, ir funkcija y=arcsin(x)"
+print "Matemaatikaa jebkuru funkciju var uzrakstiit, izmantojot Teilora rindu, kas ir"
+print "atseviskju elementu summa."
+print "Funkciju y=arcsin(x) peec izvirziijuma Teilora rindaa var uzrakstiit shaadi:"
 print ""
 print ""
 print "           500"
@@ -18,13 +21,15 @@ print "      ------------"
 print "          k = 0"
 print ""
 print ""
+print "Katru naakamo Teilora rindas locekli var apreekjinaat, esosho locekli"
+print "reizinot ar rekurences reizinaataaju R."
+print "Rekurences reizinaataajs izskataas shaadi:"
 print ""
-
+print ""
 print "        2           2"
 print "       x  * (2k - 1)"
 print "  R = ---------------"
 print "        2k (2k + 1)"
-print ""
 print ""
 print ""
 
