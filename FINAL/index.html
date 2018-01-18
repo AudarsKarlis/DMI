@@ -103,11 +103,11 @@ Kods darbojas šādi:
     pareizi izveidota un korekti pierakstīta python valodā.</pre>
    <h6>Attēls(i) ar rezultātiem</h6>
     <a href="https://github.com/AudarsKarlis/DMI/blob/master/PYTHON/sin_caur_summu.py">
-    <img src="file:///home/audars/DMI/PYTHON/klasesdarbs2.png">
+    <img src="file:///home/user/DMI/PYTHON/sincaurcummu.png">
     </a>
     <pre>Nospiežot uz attēla var pāriet uz uzdevuma kodu github'ā (klases darbs)</pre>
     <a href="https://github.com/AudarsKarlis/DMI/blob/master/PYTHON/asin.py">
-    <img src="file:///home/audars/DMI/nepietiek.png">
+    <img src="file:///home/user/DMI/PYTHON/asin_attels.png">
     </a>
     <pre>Nospiežot uz attēla var pāriet uz uzdevuma kodu github'ā (individuāls uzdevums)</pre>
 
@@ -120,14 +120,44 @@ Kods darbojas šādi:
    funkcijas vērtības atrašanas vietas noteikšana ar dihotomijas metodi
    </pre>
    <h6>Uzdevuma apraksts (ko es no tā sarotu):</h6>
-    <pre>Uzdevuma galvenais mērķis ir ... izmantojot ... piemēram ...</pre>
+    <pre>Sīkāk paskaidrošu, ko es saprotu katrā no apakšpunktiem:
+ 1. Ar funkcijas grafika zīmēšanas skripta palīdzību (mana_ziimeeshana.py) tiek aprēķinātas nepieciešamās funkcijas
+    vērtības. Skripta sākumā tiek piesaukta bibliotēka ar nosaukumu 'matplotlib.pyplot', kura realizē funkcijas grafika
+    vizuālo izveidošanu (uzzīmēšanu koordinātu sistēmā). Skripta izpildes rezultātā tiek attēloti divi grafiki - x, y grafiks,
+    kas tiek rēķināts ar iepriekš izveidoto summas formulu un x, yy grafiks, kas tiek rēķināts ar standarta iebūvēto
+    arcsin(x) funkciju. Ja šie grafiki pārklājas, tas norāda uz to, ka es savu summas formulu esmu pareizi izpratis, izveidojis
+    un pierakstījis atbilstoši python valodas normām (manā piemērā katrs grafiks ir savā krāsā - sarkans un zaļš).
+ 2. Funkcijas saknes noteikšana ar Dihotomija metodi balstās uz parādības, ka intervāla, kas atrodas pa kreisi no funkcijas
+    krustpunkta ar x asi, zīme ir negatīva un intervāla, kas atrodas pa labi no funkcijas krustpunkta ar x asi, zīme ir
+    pozitīva. Meklējot funkcijas sakni ar Dihotomijas metodi, apskatāmais intervāls nepārtraukti tiek samazināts, ar
+    nosacījumu, ka funkcijas vērtības abos apskatāmā intervāla galapunktos ir atšķirīgas (+ un - vai - un +).
+    Nosakot sakni ar Dihotomijas metodi, izpildāmajā skriptā var novērot sekojošo:
+     * 1. punktā, saknes meklēšanu uzsākot, argumenta vērtības intervāla galapunktos ir a=-0.95000 un b=0.95000. Tad tiek
+       izrēķināta funkcijas vērtība šī inervāla viduspunktā (viduspunkts ir 0.00000). Tā kā funkcijas vērtība intervāla viduspunktā
+       ir pozitīva (f(0.00000)=0.00000 un šo vērtību iekārta uzskata par pozitīvu, jo pirms funkcijas vērtības nav - zīmes),
+       tad b vērtība (intervāla labā robeža) tiek mainīta no 0.95000 uz 0.00000 (šādi uz pusi tiek samazināts saknes
+       meklēšanas intervāls).
+     * 2. punkta sākumā argumenta vērtības intervāla galapunktos ir a=-0.95000 un b= 0.00000. Tad tiek izrēķināta funkcijas
+       vērtība šī intervāla viduspunktā (viduspunkts ir -0.47500). Tā kā funkcijas vērtība intervāla viduspunktā ir negatīva
+       (f(-0.47500)=-0.49496, šo vērtību iekārta uzskata par negatīvu, jo pirms funkcijas vērtības ir - zīme), tad a vērtība
+       (intervāla kreisā robeža) tiek mainīta no -0.95000 uz -0.47500 (šādi vēl uz pusi tiek samazināts saknes meklēšanas
+       intervāls).
+     * Šādā veidā pakāpeniski tiek samazināts saknes meklēšanas intervāls un aprēķinātā funkcijas vērtība bezgalīgi tuvojas
+       reālās saknes vērtībai. Svarīgi ir pieminēt to, ka precīza funkcijas saknes noteikšana ar šo metodi nav iespējama. Saknes
+       vērtību var aprēķināt bezgalīgi tuvu reālajai, bet tā nekad nebūs reālā saknes vērtība.
+ 3. Manai funkcijai apskatāmajā intervālā neeksistē max vai min vērtība, tādēļ vienīgā vērtība, kuru šai funkcijai var noteikt,
+    ir funkcijas sakne, kas arī tika noteikta ar dihotomijas metodi iepriekšējā punktā. </pre>
    <h6>Attēls(i) ar rezultātiem</h6>
+    <a href="https://github.com/AudarsKarlis/DMI/blob/master/PYTHON/ziimeeshana.py">
+    <img src="file:///home/user/DMI/PYTHON/ziimeeshana.png">
     <a href="https://github.com/AudarsKarlis/DMI/blob/master/PYTHON/dichotomy.py">
-    <img src="...">
+    <img src="file:///home/user/DMI/PYTHON/saknes_noteik%C5%A1ana_klas.png">
     </a>
     <pre>Nospiežot uz attēla var pāriet uz uzdevuma kodu github'ā (klases darbs)</pre>
+    <a href="https://github.com/AudarsKarlis/DMI/blob/master/PYTHON/mana_ziimeeshana.py">
+    <img src="file:///home/user/DMI/PYTHON/mana_ziimeeshana.png">
     <a href="https://github.com/AudarsKarlis/DMI/blob/master/PYTHON/mana_dichotomy.py">
-    <img src="...">
+    <img src="file:///home/user/DMI/PYTHON/saknes_noteik%C5%A1ana.png">
     </a>
     <pre>Nospiežot uz attēla var pāriet uz uzdevuma kodu github'ā (individuāls uzdevums)</pre>
 
@@ -140,7 +170,8 @@ Kods darbojas šādi:
    funkcijas otrās kārtas atvasinājuma skaitliskā noteikšana un zīmēšana
    </pre>
    <h6>Uzdevuma apraksts (ko es no tā sarotu):</h6>
-    <pre>Uzdevuma galvenais mērķis ir ... izmantojot ... piemēram ...</pre>
+    <pre>Sīkāk pastāstīšu, ko es saprotu katrā no apakšpunktiem:
+ 1. ?????????????????????</pre>
    <h6>Attēls(i) ar rezultātiem</h6>
     <a href="...">
     <img src="...">
