@@ -21,10 +21,8 @@ a = -0.95
 b = 0.95
 x = np.arange(a,b,0.05)
 y = mans_asinuss(x)
-plt.plot(x,y,label="test1")
+plt.plot(x,y,label="f(x)=arcsin(x)")
 plt.grid()
-#green_patch = mpatches.Patch(color='green', label='The green data')
-#plt.legend(handles=[green_patch])
 
 n = len(x)
 y_prim = []
@@ -32,27 +30,13 @@ for i in range(n-1):
     delta_y = y[i+1]-y[i]
     delta_x = x[i+1]-x[i]
     y_prim.append(delta_y/delta_x)
-
-plt.plot(x[:n-1],y_prim,label="test2")
-#red_patch = mpatches.Patch(color='red', label='The red data')
-#plt.legend(handles=[red_patch])
-
-plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=1.)
-plt.show()
-
-'''
-line_up, = plt.plot([1,2,3], label='Line 2')
-line_down, = plt.plot([3,2,1], label='Line 1')
-plt.legend(handles=[line_up, line_down]
-
-
+plt.plot(x[:n-1],y_prim,label="f'(x)")
 
 y_primprim = []
 for i in range(n-2):
-    augsh = y[i+1]-2*y+y[i-1]
-    apaks = (x[i+1]-x[i])*(x[i+1]-x[i])
-    y_primprim.append(augsh/apaks)
-
-plt.plot(x[:n-2],y_primprim)
+    delta_y_prim = y_prim[i+1]-y_prim[i]
+    delta_x = x[i+1]-x[i]
+    y_primprim.append(delta_y_prim/delta_x)
+plt.plot(x[:n-2],y_primprim,label="f''(x)")
+plt.legend(bbox_to_anchor=(1.05, 1), loc=7, borderaxespad=1.)
 plt.show()
-'''    
