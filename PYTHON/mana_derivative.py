@@ -3,7 +3,6 @@
 # http://www.cplusplus.com/reference/studio/printf
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 
 
 def mans_asinuss(x):
