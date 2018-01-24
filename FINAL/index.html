@@ -222,7 +222,11 @@ Kods darbojas šādi:
    ziņojuma dekodēšana
    </pre>
    <h6>Uzdevuma apraksts (ko es no tā sarotu):</h6>
-    <pre>Uzdevuma galvenais mērķis ir ... izmantojot ... piemēram ...</pre>
+    <pre>Uzdevuma mērķis ir izveidot programmu, ar kuras palīdzību būtu iespējams atšifrēt kodētu ziņojumu. Failā data.bin atrodas
+datu virkne, kurā atrodas iešifrētais ziņojums. Failā meta.bin atrodas informācija par to, kā pareizi ir jānolasa fails data.bin,
+lai varētu atšifrēt doto ziņojumu. Faila meta.bin nepāru baiti norāda, cik liela, rēķināta baitos, ir nobīde failā data.bin no
+pašreizējās novērotāja atrašanās vietas līdz nākamajam nolasāmajam baitam. Nolasāmais baits satur kodētu simbolu. Lai iegūtu
+kodētā ziņojuma vienu simbolu, ar šo un faila meta.bin maskas baita vērtību ir jāveic XOR operācija.</pre>
    <h6>Attēls(i) ar rezultātiem</h6>
     <a href="...">
     <img src="...">
@@ -234,20 +238,20 @@ Kods darbojas šādi:
   <h5>Nodarbību vēsture</h5>
    <ol>
     <li><a href="...">mācību nedēļa (04.09 - 08.09)</a></li>
-    <li><a href="...">mācību nedēļa (11.09 - 15.09)</a></li>
-    <li><a href="...">mācību nedēļa (18.09 - 22.09)</a></li>
-    <li><a href="...">mācību nedēļa (25.09 - 29.09)</a></li>
-    <li><a href="...">mācību nedēļa (02.10 - 06.10)</a></li>
-    <li><a href="...">mācību nedēļa (09.10 - 13.10)</a></li>
-    <li><a href="...">mācību nedēļa (16.10 - 20.10)</a></li>
-    <li><a href="...">mācību nedēļa (23.10 - 27.10)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/25e14bdaa78f47b3eae9d4d7d335012bf2dd012f">mācību nedēļa (11.09 - 15.09)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/d5b72ea18cde04dd00a05ce970fea1abcbe2c85a">mācību nedēļa (18.09 - 22.09)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/32967a80cb0eab82248b958596f57b83f0aff9f7">mācību nedēļa (25.09 - 29.09)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/5a6768d4fbb075ed89a1ec27a2291ec09e6f4cbd">mācību nedēļa (02.10 - 06.10)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/8f379e761ae934b14ba6eca7c83fce512e16793a">mācību nedēļa (09.10 - 13.10)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/9c23a7355ce16e18231a6afe4df4736bb8951b52">mācību nedēļa (16.10 - 20.10)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/17889e6fba0b0b62689fb3152451ff397125c5b7">mācību nedēļa (23.10 - 27.10)</a></li>
     <li><a href="...">mācību nedēļa (30.10 - 03.11)</a></li>
-    <li><a href="...">mācību nedēļa (06.11 - 10.11)</a></li>
-    <li><a href="...">mācību nedēļa (13.11 - 17.11)</a></li>
-    <li><a href="...">mācību nedēļa (21.11 - 24.11)</a></li>
-    <li><a href="...">mācību nedēļa (27.11 - 01.12)</a></li>
-    <li><a href="...">mācību nedēļa (04.12 - 08.12)</a></li>
-    <li><a href="...">mācību nedēļa (11.12 - 15.12)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/ec7fd916c23387764739ff2fe02031bd44859f9b">mācību nedēļa (06.11 - 10.11)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/bf1b0ce09a10123e3e329ce564f0f2669cb9a3e1">mācību nedēļa (13.11 - 17.11)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/ca278a571690c6dd86b25a0b60ab5f4a31d4bba7">mācību nedēļa (21.11 - 24.11)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/6420b4348c7e101249bdd118754bcf7ea4e3dcfc">mācību nedēļa (27.11 - 01.12)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/5eddf9baf9f2183624df764ea031a14f240bac7a">mācību nedēļa (04.12 - 08.12)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/commit/3bc0e56adc75f61a37159a25b7d2fdf8f4c98e38">mācību nedēļa (11.12 - 15.12)</a></li>
     <li><a href="...">mācību nedēļa (18.12 - 22.12)</a></li>
    </ol>
 
@@ -255,30 +259,42 @@ Kods darbojas šādi:
   <br>
   <h5>Tēmas</h5>
    <ul>
-    <li>shell: operētājsistēmas noskaidrošana - ...</li>
-    <li>shell: lietotāja vārda noskaidrošana - ...</li>
-    <li>shell: atrašanas vietas (failu sistēmā) noskaidrošana - ...</li>
-    <li>shell: pieslēgšanas citai darba stacijai (citam serverim) - ...</li>
+    <li>shell: operētājsistēmas noskaidrošana - uname -a</li>
+    <li>shell: lietotāja vārda noskaidrošana - whoami</li>
+    <li>shell: atrašanas vietas (failu sistēmā) noskaidrošana - pwd</li>
+    <li>shell: pieslēgšanas citai darba stacijai (citam serverim) - ssh -X x171RMC216@213.175.92.22 (parole: 111)</li>
     <li>shell: darbības ar failu sistēmas objektiem (failiem, mapēm)</li>
      <ul>
-      <li>... - ...</li>
+      <li>cd - mainīt direktoriju (pārvietoties pa katalogiem)</li>
+      <li>ls -l - parāda direktorijā eksistējošus failus</li>
+      <li>mkdir - izveidot jaunu mapi</li>
+      <li>mv - pārvietot failus uz citu mapi</li>
+      <li>nano - rediģēt faila saturu (arī izveidot jaunu failu)</li>
+      <li>cat - lasīt faila saturu, to neatverot</li>
+      <li>cp - kopēt faila saturu</li>
+      <li>./failanosaukums - izpildīt failu ar nosaukumu 'failanosaukums'</li>
      </ul>
     <li>shell: darbības ar git'u</li>
      <ul>
-      <li>... - ...</li>
+      <li>git clone https://github.com//AudarsKarlis//DMI.git - skripts, kurš jāizpilda pirms katras praktiskās nodarbības, lai savu personīgo
+DMI mapi ar iepriekšējiem failiem lejupielādētu konkrētajā darba mašīnā</li>
+      <li>./git-upload datums.laiks.laiks - skripts, kurš jāizpilda katras praktiskās nodarbības beigās, lai savu personīgo DMI mapi ar tur
+nodarbības laikā saglabātajiem failiem augšupielādētu githuba serverī (izpildot šo skriptu, jāatrodas DMI mapē)</li>
      </ul>
-    <li>shell: shell interpretatora atrašanas vieta - ...</li>
+    <li>shell: shell interpretatora atrašanas vieta - whereis interpretators, piem., whereis ls</li>
     <li>shell: shell skripta(u) piemērs(i)</li>
      <ul>
-      <li><a href="...">shell: skripta neliels apraksts - ...</a></li>
+      <li><a href="https://github.com/AudarsKarlis/DMI/blob/master/a_VS_b.sh">shell: skripta neliels apraksts - Izpildot skriptu, lietotājam ir jāievada divi lielumi (a un b).
+Šie lielumi tiek ierakstīti mašīnas atmiņā un ar tiem tiek veiktas salīdzinašanas darbības un ar if nosacījuma operatora  un komandas echo palīdzību tiek
+attēlota viena no iespējam (a ir lielāks par b, a ir mazāks par b vai a ir vienāds ar b).</a></li>
      </ul>
-    <li><a href="...">shell: mainīgie</a></li>
-    <li><a href="...">shell: datu ievade/izvade</a></li>
-    <li><a href="...">shell: operācijas</a></li>
-    <li><a href="...">shell: nosacījuma operators</a></li>
-    <li><a href="...">shell: cikla operators</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/blob/master/a_VS_b_VS_c.sh">shell: mainīgie</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/blob/master/test.sh">shell: datu ievade/izvade</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/blob/master/shell_operators.sh">shell: operācijas</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/blob/master/a_VS_b.sh">shell: nosacījuma operators (if)</a></li>
+    <li><a href="https://github.com/AudarsKarlis/DMI/blob/master/statistika.sh">shell: cikla operators</a></li>
     <li>Python: Python interpretatora atrašanas vieta - ...</li>
-    <li>Python: vide ērtam darbam ar Python'u - ...</li>
+    <li>Python: vide ērtam darbam ar Python'u - idle</li>
     <li>Python: Python skripta(u) piemērs(i)</li>
      <ul>
       <li><a href="...">Python: skripta neliels apraksts - ...</a></li>
