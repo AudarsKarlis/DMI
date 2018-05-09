@@ -1,0 +1,86 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{ragged2e}
+\usepackage{natbib}
+\usepackage[total={14.8cm,24.1cm},
+top=2.1cm, left=3.2cm, includefoot]{geometry}
+
+
+\title{Activation function - sigmoid\\
+108-W3-P4-171RMC216}
+\author{Audars Kārlis Klints }
+\date{March 2018}
+
+\pagestyle{empty}{238 \hspace{5mm} \textit{1. Analysis}}
+
+\begin{document}
+%\chapter{Sample Chapter}
+%\section{New section}
+
+%\maketitle
+
+\section{Limits of sequences}
+\subsection{Basic ideas}
+
+
+\textbf{Sequences: } \textit{Example 1:} We consider the sequences of real numbers ($a_n$) with
+
+$$a_n := \frac{1}{n}, \quad \quad n = 1,2,...$$
+As $n$ grows in magnitude, the value of $a_n$ approaches 0 (see Table 1.1). To describe this behaviour we write
+\[
+ \boxed{\lim_{n\to\infty} a_n = 0}
+ \]
+and say that the $limit$ of the sequence ($a_n$) is 0.
+
+\begin{table}[ht]
+    \centering
+    \label{tab.my_label}
+    \caption{1}
+    \begin{tabular}{  c || c| c | c| c | c | c | c  } \hline
+ $\textbf{n}$ & $1$ & $2$ & $10$ & $100$ & $1000$ & $10000$ & $\cdots$ \\\hline
+ $\textbf{an}$ & $1$ & $0.5$ & $0.1$ & $0.01$ & $0.001$ & $0.0001$ & $\cdots$ \\\hline
+    \end{tabular}
+\end{table}
+%\vspace{5 mm}
+\noindent \textit{Example 2:} The sequences ($b_n$) with $b_n$ :=\(\displaystyle \frac{n}{n+1}\) approaches for large $n$ the value 1. We again write $\lim_{n\to\infty} b_n = 1$.
+
+\noindent \textbf{Functions: }In many applications of mathematics in science, the technology and economics, the netion of limits plays a particularity important role. The notion of the $limit of a function$ in reduced to the notion of the limit of a sequence as above.
+
+\noindent\textit{Example 3:} Consider the function\\
+
+
+\begin{equation*}
+f(x)=\begin{cases}
+\textit{$x^2$}&  \text{for att real numbers $x \neq 0$},\\
+1&  \text{for $x = 0$}
+\end{cases}
+\end{equation*}
+
+\vspace{5 mm}
+
+
+\noindent We write
+\[
+ \boxed{\lim_{x\to a} \textit{f(x)}= b,}
+ \]
+if and only if for every sequence ($a_n$) with $a_n \neq a$ for all $n$, we have the following:
+
+\[
+ \boxed{\text{From} \(\displaystyle \lim_{n\to\infty} a_n = 0\) \text{it follows that} \lim_{n\to \infty} f(a_n) = b.}
+ \]
+\noindent For the function $f(x)$ in this example one has
+ 
+\begin{equation} \label{eq1}
+\lim_{x\to0} \textit{f(x)}= 0,
+\end{equation}
+ 
+\noindent since from \(a_n \neq 0 \) for all $n$ and \(\displaystyle \lim_{n\to\infty} a_n = 0\) it follows that \(\displaystyle \lim_{n\to\infty} f(a_n) = \lim_{n\to\infty} {a_n}^2 = 0.\)
+
+\noindent The relation (\ref{eq1}) corresponds to our intuitive impression: if the point $x$ approaches from the right (of the left) the point 0, then the corresponding values of the function approach 0. The value of $f$ at 0 is irrelevant to these considerations.
+
+\noindent Since the limit of a sequence of rational numbers can be irrational, one needs a rigorous development of the theory of limits, arising from a rigorous introduction of the real numbers, wich we describe in the following section.
+ 
+\end{document}
