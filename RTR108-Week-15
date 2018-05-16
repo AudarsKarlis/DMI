@@ -1,0 +1,35 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{ragged2e}
+\usepackage{natbib}
+\usepackage[total={14.8cm,24.1cm},
+top=2.1cm, left=3.2cm, includefoot]{geometry}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}% Change page style to fancy
+\fancyhf{}% Clear header/footer
+\fancyhead[R]{\thepage}
+\fancyhead[C]{Units associated with basic electrical quantities}
+%\fancyfoot[C]{Footer}% \fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+%\pagestyle{empty}{5 \hspace{5mm} \textit{Units associated with basic electrical quantities\\------------}}
+
+\begin{document}
+
+\fbox{
+  \parbox{\textwidth}{
+    Problem 2.  A mass of 5000 g is accelerated at 2 $m/s^2$ by a force.\\
+Determine the force needed.
+  }
+}
+\vspace{5 mm}
+Force = mass $\times$ acceleration\\
+\hspace{1cm} = 5 kg $\times$ 2 $m/s^2$ = 10 \frac{kgm}{$s^2$}
+
+ 
+\end{document}
