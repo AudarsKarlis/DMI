@@ -1,0 +1,151 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{PaloAlto}
+\usecolortheme{beaver}
+\usepackage{tikzsymbols}
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\title{Elektrotehnikas teorētisko pamatu studiju darbs\\
+RTR108-W16-171RMC216}
+\author{Audars Karlis Klints}
+\institute{RTU Telecomunications faculty}
+\date{May, 2018}
+
+\begin{document}
+\frame{\titlepage}
+\begin{frame}{Ievads \tiny (1. slaids)}
+--- Metodi, kura balstās uz Oma un Kirhofa likuma pielietošanu sazarotas ķēdes zaru strāvu aprēķinam, daudzās mācību grāmatās sauc par \textbf{zaru strāvu metodi}. Ja ķēde sastāv no līdzsprieguma avotiem un rezistīviem elementiem, un ķēdei ir $z$ zari un $m$ mezgli, tad var sastādīt sekojošu vienādojumu skaitu:\\
+\begin{center}
+\begin{cases}
+n_1=m-1 \text{{\tiny\hspace{1.97 cm}pēc KStL}}\\
+n_2=z-(m-1) \text{{\tiny\hspace{1 cm}pēc KSpL}}\\
+\end{cases} 
+\end{center}
+--- Ja ķēde satur arī strāvas avotus un to skaits ir $n_J$, tad sastādāmo vienādojumu skaits ir:
+\begin{center}
+\begin{cases}
+n_1=m-1 \text{\tiny\hspace{2.26 cm} pēc KStL}\\
+n_2=z-(m-1)-n_j \text{\tiny\hspace{0.5 cm} pēc KSpL}
+\end{cases}
+\end{center}
+\end{frame}
+\begin{frame}{Ievads \tiny (2. slaids)}
+--- Zaru strāvu metode nav racionāla, jo vienādojumu skaits atbilst nezināmo zaru skaitam, kuru ir daudz. Doto sistēmu atrisināt ar ievietošanas metodi ir grūti \Sadey[1.1][pink] un arī determinantu izmantošana ir sarežģīta. Risinājums - šeit jāpielieto skaitļotāji, piem., MatLab.\\
+--- Tālāk aprakstīšu \textbf{kontūrstrāvu metodes (KSM)} un \textbf{mezglu spriegumu metodes (MSpM)} izmantošanas algoritmus. Dotās shēmas zaru strāvas aprēķināšu, izmantojot \textbf{KSM}.
+\end{frame}
+\begin{frame}{1. metode \tiny (KSM izmantošanas algoritms)}
+\textbf{Ķēdes zaru strāvu aprēķins, izmantojot kontūrstrāvu metodi (KSM)}\\
+---  Sastādāmo vienādojumu skaitu var noteikt pēc formulas $k=z-(m-1)-n_j$, kur $k$ - neatkarīgo kontūru skaits, $z$ - zaru skaits, $m$ - mezglu skaits, $n_j$ - ideālo strāvas avotu skaits.\\
+---  Neatkarīgo kontūru skaitu un izvēli vieglāk noteikt, uzzīmējot ķēdes topoloģiju vai tās grafu. Atsevišķos gadījumos grafu nav vajadzības zīmēt, jo neatkarīgie kontūri ir acīmredzami.\\
+--- Jāsastāda vienādojumu sistēma neatkarīgajiem kontūriem pēc Kirhofa sprieguma likuma (KSpL) saskaņā ar iepriekš izvēlētiem kontūrstrāvu virzieniem.
+\end{frame}
+\begin{frame}{2. metode \tiny (MSpM izmantošanas algoritms)}
+\textbf{Ķēdes zaru strāvu aprēķins, izmantojot mezglu spriegumu metodi (MSpM)}\\
+---  Sastādāmo vienādojumu skaits $N$ pēc mezglu spriegumu metodes $N=m-1-n_E$, kur $m$ ir mezglu skaits, $n_E$ - ideālo sprieguma avotu skaits.\\
+---  Jāiezemē kāds brīvi izvēlēts shēmas mezgls un jāuzskata, ka šī mezgla potenciāls $\varphi=0$.\\
+--- Jāsastāda vienādojumu sistēma, kuru izveido, reizinot mezgla potenciālu ar visām šim mezglam piederošām vadītspējām $G$. Rezistīva elementa vadītspēja ir apgriezts lielums rezistīva elementa pretestībai $R$ un šo lielumu savstarpējo saistību apraksta sakarība $G=\frac{1}{R}$.
+\end{frame}
+\begin{frame}{LTSpice simulācija}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=.4]{shema}
+\caption{Aplūkojamās shēmas modelējums LTSpice vidē.}
+\label{fig:sigmoid}
+\end{figure}
+\end{frame}
+\begin{frame}{Pētījuma gaita \tiny (1. slaids)}
+\textbf{Dotā shēma:}
+\begin{center}
+\begin{circuitikz} \draw
+    (-1,6) to [american current source, l^=$J_1$,] (-1,4)
+    (-1,4) -- (1,4)
+          to [european resistor, l^=$R_3$, *-] (3,4)
+    (5,4) to [american voltage source, v_>=$E_1$, *-] (3,4)
+    (5,4) to [european resistor, l^=$R_2$, -*] (5,6) -- (-1,6)
+    (1,6) to [european resistor, l^=$R_1$, *-] (1,4)
+          to [european resistor, l^=$R_4$] (1,1)
+    (5,1) to [american voltage source, v_>=$E_2$, *-] (1,1)
+    (5,1 )to [european resistor, l^=$R_5$] (5,4)
+    (5,6) -- (7,6)
+    (7,6) -- (7,5) to [short, *-] (6,5)
+          to [american current source, l^=$J_2$] (6,3) -- (8,3)
+          to [european resistor, l^=$R_6$] (8,5) -- (6,5)
+    (7,3) to [short, *-] (7,1) -- (5,1)
+          
+\end{circuitikz}
+\end{center}
+Ekvivalenti aizvietošu reālos strāvas avotus ar reāliem sprieguma avotiem.
+\end{frame}
+\begin{frame}{Pētījuma gaita \tiny (2. slaids)}
+\textbf{Pārveidotā shēma:}
+\begin{center}
+\begin{circuitikz} \draw
+    (-1,4) to [american voltage source, v^>=$EJ_1$] (-1,6)
+    (-1,4) -- (1,4)
+          to [european resistor, l^=$R_3$, *-] (3,4)
+    (5,4) to [american voltage source, v_>=$E_1$, *-] (3,4)
+    (5,4) to [european resistor, l^=$R_2$, -*] (5,6) -- (1,6)
+    (1,6) to [european resistor, l^=$R_1$] (-1,6)
+    (1,4) to [european resistor, l^=$R_4$] (1,1)
+    (5,1) to [american voltage source, v_>=$E_2$, *-] (1,1)
+    (5,1 )to [european resistor, l^=$R_5$] (5,4)
+    (5,6) -- (7,6)
+    (7,2) to [american voltage source, v^>=$EJ_2$] (7,4)
+          to [european resistor, l^=$R_6$] (7,5.5) -- (7,6)
+    (7,2) -- (7,1) -- (5,1)
+          
+\end{circuitikz}
+\end{center}
+{\tiny --- Strāvas avotu $J_1$ aizvietoju ar ekvivalentu sprieguma avotu $EJ_1$ un ieslēdzu virknē ar rezistoru $R_1$.\\
+--- Strāvas avotu $J_2$ aizvietoju ar ekvivalentu sprieguma avotu un ieslēdzu virknē ar rezistoru $R_6$.}
+\end{frame}
+\begin{frame}{Pētījumu gaita \tiny (3. slaids)}
+\textbf{Definēšu kontūrus:}\\
+--- \textbf{A kontūrs:} $EJ_1$ \rightarrow $R_3$ \rightarrow $E_1$ \rightarrow $R_2$ \rightarrow $R_1$ \rightarrow $EJ_1$ ($\circlearrowleft$)\\
+--- \textbf{B kontūrs:} $E_2$ \rightarrow $R_5$ \rightarrow $E_1$ \rightarrow $R_3$ \rightarrow $R_4$ \rightarrow $E_2$ ($\circlearrowleft$)\\
+--- \textbf{C kontūrs:} $EJ_2$ \rightarrow $R_2$ \rightarrow $R_5$ \rightarrow $R_6$ \rightarrow $EJ_2$ ($\circlearrowleft$)\\
+\textbf{Iegūstu šādu vienādojumu sistēmu:}
+\begin{center}
+\begin{cases}
+A(R_1+R_2+R_3)-B(R_3)-C(R_2)=E_1+EJ_1\\
+-A(R_3)+B(R_3+R_4+R_5)-C(R_5)=E_2-E_1\\
+-A(R_2)-B(R_5)+C(R_2+R_5+R_6)=-EJ_2
+\end{cases} 
+\end{center}
+Vienādojumu sistēmu ir iespējams atrisināt, izmantojot MatLab (kods nākamajā slaidā).
+\end{frame}
+\begin{frame}[fragile]{Pētījumu gaita \tiny (4. slaids)}
+\textbf{Matlabā izmantotais kods:}
+\begin{verbatim}
+J1=8;J2=4;E1=19;E2=11;         %dotie lielumi
+R1=3;R2=3;R3=4;R4=5;           %dotie lielumi
+R5=9;R6=7;EJ1=J1*R1;EJ2=J2*R6; %dotie lielumi
+
+R=[R1+R3+R2  -R3        -R2;
+  -R3         R3+R4+R5  -R5;
+  -R2        -R5         R2+R5+R6]; %pretest matr
+E=[EJ1+E1;-E1+E2;-EJ2]; %sprieguma avotu matr
+I=R\E; %vienādojumu sistēmas atrisināšana
+A=I(1,:);B=I(2,:);C=I(3,:) %strāvu atrašana
+\end{verbatim}
+\textbf{Iegūtie rezultāti:} I_A=4.0866$mA$, I_B=0.0648$mA$, I_C=-0.07977$mA$\\
+I_1=-4.0866$mA$, I_2=4.8843$mA$, I_3=4.0218$mA$,\\
+I_4=-0.0648$mA$, I_5=0.8626$mA$, I_6=0.7977$mA$
+\end{frame}
+
+\begin{frame}{Rezultātu analīze}\\
+--- Caur rezistoru \boldsymbol{R_1} plūst 4.0866 $mA$ stipra strāva. Mīnus zīme pie šīs vērtības norāda, ka strāvas plūšanas virziens ir pretējs pieņemtajam.\\
+--- Caur rezistoru \boldsymbol{R_2} plūst 4.8843 $mA$ stipra strāva un tās plūšanas virziens sakrīt ar pieņemto.\\
+--- Caur rezistoru \boldsymbol{R_3} plūst 4.0218 $mA$ stipra strāva un tās plūšanas virziens sakrīt ar pieņemto.\\
+--- Caur rezistoru \boldsymbol{R_4} plūst 0.0648 $mA$ stipra strāva. Strāvas plūšanas virziens ir pretējs pieņemtajam.\\
+--- Caur rezistoru \boldsymbol{R_5} plūst 0.8626 $mA$ stipra strāva un tās plūšanas virziens sakrīt ar pieņemto.\\
+--- Caur rezistoru \boldsymbol{R_6} plūst 0.7977 $mA$ stipra strāva un tās plūšanas virziens sakrīt ar pieņemto.\\
+
+\end{frame}
+\begin{frame}{Slēdzieni {\tiny (vai diskusija)} \Laughey \Laughey \Laughey}\\
+--- \textbf{Zaru strāvu metode} nav racionāla, jo veidojas gara vienādojumu sēma.\\
+--- Vienādojumu skaitu ir iespējams samazināt, izmantojot \textbf{kontūrstrāvas}.\\
+--- Izmantojot kontūrstrāvas, nav iespējams sastādīt vienādojumus pēc KStL, tātad vienādojumu skaits samazinās. Izmantojot KSpL, ir jāsastāda $n_2=z-(m-1)-n_J$ vai $n_2=k$, kur $k$ ir grafa neatkarīgo kontūru skaits.
+\end{frame}
+\end{document}
